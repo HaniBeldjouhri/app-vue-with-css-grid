@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+body {
+  line-height: 1.5;
+  font-family: tahoma;
+  background-color: rgb(236, 242, 248);
+}
+
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+p{
+  margin-top: 1em;
+}
+h2{
+  margin-bottom: -10px;
+}
+
+.bg-primary-400 {
+  background: rgb(117, 65, 200);
+}
+.bg-secondary-400 {
+  background: rgb(72, 85, 106);
+}
+.bg-secondary-500 {
+  background: rgb(25, 33, 46);
+}
+
+.bg-neutral-100 {
+  background: white;
+}
+
+.text-neutral-100 {
+  color: white;
+}
+
+.border-primary-400 {
+  border: 2px solid #a775f1;
+}
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:'one''two''three''four''five';
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.section {
+  font-size: 0.8125rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.section:nth-child(1) {
+  grid-area: one;
+}
+.section:nth-child(2) {
+  grid-area: two;
+}
+.section:nth-child(3) {
+  grid-area: three;
+}
+.section:nth-child(4) {
+  grid-area: four;
+}
+.section:nth-child(5) {
+  grid-area: five;
+}
+
+.quote {
+  background-image: url("./components/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+img {
+  width: 1.75rem;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.position {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+@media (min-width: 33em) {
+  .container {
+      grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media (min-width: 38em) {
+  .container {
+    grid-template-areas:
+     'one one'
+     'two five'
+     'three five'
+     'four four';
+  }
+}
+
+@media (min-width: 54em) {
+  .container {
+      grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+      grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
